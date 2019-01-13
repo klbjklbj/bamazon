@@ -6,7 +6,7 @@ This app was created with Node.js, Inquirer.js and MySQL.
 # Getting Started
 * Clone repo.
 * Run command in Terminal or Gitbash 'npm install'
-* Run command depending which mode you would like to be on: 1) For Customer - 'node bamazonCustomer' or For Manager - 'node bamazonManager'
+* Run command depending which mode you would like to be on: 1) For Customer - 'node bamazonCustomer' or 2)For Manager - 'node bamazonManager'
 * Run 'ctrl + c' to exit each mode
 
 The file bamazonCustomer.js prompts users with two messages...The first asks the ID of the product they would like to buy.
