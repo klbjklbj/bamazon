@@ -29,13 +29,13 @@ Below is a screenshot of the start menu for bamazonManager.js
 ![Image of Manager Menu](https://github.com/klbjklbj/bamazon/blob/master/images/menu.png)
 
 Below is a screenshot of the View Products for Sale function for bamazonManager.js
-![Image of Manager Menu](https://github.com/klbjklbj/bamazon/blob/master/images/menu.png)
+![Image of Manager Menu](https://github.com/klbjklbj/bamazon/blob/master/images/products.png)
 
 Below is a screenshot of the View Low Inventory function for bamazonManager.js
 ![Image of Manager Menu](https://github.com/klbjklbj/bamazon/blob/master/images/low.png)
 
 Below is a screenshot of the Add to Inventory function for bamazonManager.js
-![Image of Manager Menu](https://github.com/klbjklbj/bamazon/blob/master/images/menu.png)
+![Image of Manager Menu](https://github.com/klbjklbj/bamazon/blob/master/images/add.png)
 
 Below is a screenshot of the Add New Product for bamazonManager.js
 ![Image of Manager Menu](https://github.com/klbjklbj/bamazon/blob/master/images/new.png)
