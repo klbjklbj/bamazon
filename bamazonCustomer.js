@@ -33,7 +33,7 @@ function productSearch() {
         .prompt([{
             name: "productID",
             type: "input",
-            message: "Which product ID would you like to search for?"
+            message: "For which product ID would you like to search?"
         },
         {
             name: "quantity",
@@ -45,30 +45,31 @@ function productSearch() {
         .then(function (answer) {
             let productIDWanted = answer.productID;
             connection.query("SELECT * FROM products WHERE ?", { item_id: productIDWanted }, function (err, res) {
-                console.log("answer.productID=" + answer.productID);
+                //console.log("answer.productID=" + answer.productID);
                 console.table(res);
                 let itemsAvailable = res[0].stock_quantity;
-                let itemCost=res[0].price;
-                
-                console.log(itemCost);
-                
-                console.table(itemsAvailable);
+                let itemCost = res[0].price;
+
+                //console.log(itemCost);
+
+                //console.table(itemsAvailable);
 
                 let itemsDesired = answer.quantity;
-                let totalCost=itemsDesired*itemCost;
-                
-                console.log("itemsDesired: " + itemsDesired);
+                let totalCost = itemsDesired * itemCost;
                 console.log("productIDWanted: " + productIDWanted);
+                console.log("itemsDesired: " + itemsDesired);
+
                 if (itemsDesired <= itemsAvailable) {
                     let newItemsAvailableTotal = itemsAvailable - itemsDesired;
-                    console.log("There are enough items available to order");
-                    console.log("Now there are " + newItemsAvailableTotal + " left");
+                    //console.log("Great! We have enough available to order");
+                    //console.log("Now there are " + newItemsAvailableTotal + " left");
                     //"UPDATE products SET stock_quantity = 0 WHERE item_id=5"
                     let updateQuery = "UPDATE products SET stock_quantity = " + newItemsAvailableTotal + " WHERE item_id=" + answer.productID;
-                    console.log(updateQuery);
+                    //console.log(updateQuery);
                     connection.query(updateQuery,
                     )
-                    console.log("Your total is: $"+ totalCost.toFixed(2));
+                    console.log("Thanks for your order. Your total is: $" + totalCost.toFixed(2));
+                    listProducts();
                 }
                 else {
                     console.log("Sorry, there are not enough left in stock. Please try a different order.");

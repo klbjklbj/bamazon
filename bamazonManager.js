@@ -25,12 +25,14 @@ connection.connect(function (err) {
 function viewProducts() {
     connection.query("SELECT * FROM products", function (err, res) {
         console.table(res);
+        menuStart();
     });
 }
 
 function viewLowInventory() {
     connection.query("SELECT * FROM products WHERE stock_quantity < 5", function (err, res) {
         console.table(res);
+        menuStart();
     });
 }
 
@@ -55,6 +57,7 @@ function addInventory() {
             connection.query("SELECT * FROM products WHERE ?", { item_id: productIDWanted }, function (err, res) {
                 console.table(res);
                 let currentQuantity = res[0].stock_quantity;
+
                 console.log("current Quantity:" + currentQuantity);
                 console.log("answer.productID=" + answer.productID);
                 console.log("itemsToAdd: " + itemsToAdd);
@@ -63,11 +66,14 @@ function addInventory() {
                 console.log("New Total: " + newItemTotal);
 
                 let updateQuery = "UPDATE products SET stock_quantity = " + newItemTotal + " WHERE item_id=" + answer.productID;
-                console.log(updateQuery);
-                connection.query(updateQuery, function (err, res) {
-                    console.log(res);
-                })
 
+                //console.table(res);
+
+                //console.log(updateQuery);
+                connection.query(updateQuery, function (err, res) {
+                    console.table(res);
+
+                })
             })
         })
 }
@@ -105,6 +111,9 @@ function addProduct() {
                     stock_quantity: answer.quantity
                 }
             )
+
+            viewProducts();
+
         })
 }
 
@@ -118,20 +127,20 @@ function menuStart() {
         },
         ])
         .then(function (answer) {
-            console.log(answer.menu);
+            // console.log(answer.menu);
             if (answer.menu === "View Products for Sale") {
                 viewProducts();
             }
             if (answer.menu === "View Low Inventory") {
-                console.log("View Low Inventory");
+                // console.log("View Low Inventory");
                 viewLowInventory();
             }
             if (answer.menu === "Add to Inventory") {
-                console.log("Add to Inventory");
+                // console.log("Add to Inventory");
                 addInventory();
             }
             if (answer.menu === "Add New Product") {
-                console.log("Add New Product");
+                // console.log("Add New Product");
                 addProduct();
             }
 

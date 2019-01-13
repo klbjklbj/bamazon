@@ -14,34 +14,34 @@ PRIMARY KEY (item_id)
 );
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("product 1", "Dept X", 5.55, 789);
+VALUES ("Fuzzy Dice", "Novelties", 5.55, 789);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("product 2", "Dept X", 8.50, 500);
+VALUES ("Redneck Rampage", "Video Games", 28.50, 500);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("product 3", "Dept Y", 500, 1000);
+VALUES ("Zima 6-pack", "Food & Beverage", 7.99, 1000);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("product 4", "Dept Z", 300, 250);
+VALUES ("Whoopie Cushion", "Novelties", 2.49, 250);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("product 5", "Dept X", 10, 800);
+VALUES ("Ron Swanson Bobblehead", "Novelties", 8.95, 800);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("product 6", "Dept Z", 10, 2);
+VALUES ("Pet Rock", "Pets", 10, 2);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("product 7", "Dept X", 5, 7);
+VALUES ("Best of Weird Al Yankovic", "Music", 15.99, 7);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("product 8", "Dept X", 1.50, 10);
+VALUES ("Fake Barf", "Novelties", 1.50, 10);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("product 9", "Dept Y", 11.50, 10);
+VALUES ("Land of the Lost - The Complete Collection", "DVDs", 11.50, 10);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("product 10", "Dept Z", 3.50, 22);
+VALUES ("Krustys Kough Syrup", "Health & Beauty", 3.50, 22);
 
 UPDATE products SET stock_quantity="0" WHERE product_name = "product 8";
 
