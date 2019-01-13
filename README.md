@@ -15,6 +15,7 @@ The file *bamazonCustomer.js* prompts users with two messages...The first asks t
 The second message asks how many units of the product they would like to buy. Once the user/customer has placed the order, the application will check if the store has enough of the product to meet the customer's request. If there is not enough inventory 
 the app will prevent the order from going through, let the user know, ask them to make a different order. If the store has enough of the product, the app will complete the order by giving the user the total order cost and by updating SQL database with the new inventory total.
 
+![Image of Customer Order](https://github.com/klbjklbj/bamazon/blob/master/images/order.png)
 
 
 The file *bamazonManager.js* lists a set of menu options: *View Products for Sale*, *View Low Inventory*, *Add to Inventory*, and *Add New Product*. If a user/manager selects *View Products for Sale*, the app lists every available item: the item IDs, names, prices, and quantities. If a manager selects *View Low Inventory*, then the app lists all items with an inventory count lower than five. 
