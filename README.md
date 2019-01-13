@@ -5,9 +5,11 @@ This app was created with Node.js, Inquirer.js and MySQL.
 
 # Getting Started
 * Clone repo.
-* Run command in Terminal or Gitbash 'npm install'
-* Run command depending which mode you would like to be on: 1) For Customer - 'node bamazonCustomer' or 2) For Manager - 'node bamazonManager'
+* Run the command 'npm install' in Terminal or Gitbash 
+* Run the command depending which mode you would like to use: 1) For Customer - 'node bamazonCustomer' or 2) For Manager - 'node bamazonManager'
 * Run 'ctrl + c' to exit each mode
+
+# How to use it
 
 The file bamazonCustomer.js prompts users with two messages...The first asks the ID of the product they would like to buy.
 The second message asks how many units of the product they would like to buy. Once the user/customer has placed the order, the application will check if the store has enough of the product to meet the customer's request. If there is not enough inventory 
